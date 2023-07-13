@@ -1,29 +1,35 @@
-const  add = function(array) {
-    return array.reduce((total, current) => total + current,0)
-} 
+//numbers and operator functions
+let firstNum = 2;
+let operator = "*";
+let secondNum = 3;
 
+//basic math functions//
+const add = function () {
+    return firstNum + secondNum;
+}
 
-console.log (add([12,15,2,4]))
+const subtract = function () {
+    return firstNum - secondNum;
+}
+const multiply = function () {
+    return firstNum * secondNum
+   
+}
+const divide = function () {
+    return firstNum / secondNum;
+}
 
+//operate function
 
-const subtract = function(array) {
-    return array.reduce((total, current) => total - current,0)
-} 
-
-console.log (subtract([12,15,3,5,12,-55]))
-
-const multiply = function (array) {
-    let solution = 1;
-    for (let i = 0; i < array.length; i++) {
-        solution *= array[i]
+const operate = function () {
+    if (operator === "+") {
+        return add()
+    } else if (operator === "-") {
+        return subtract()
+    } else if (operator === "*") {
+        return multiply()
+    } else if (operator === "/") {
+        return divide()
     }
-    return solution
 }
 
-console.log (multiply ([4,5,6]))
-
-const divide = function (a,b) {
-   return a/b
-
-}
-console.log (divide(6,3))
