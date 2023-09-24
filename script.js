@@ -1,6 +1,6 @@
 //numbers and operator functions
 let firstNum = 2;
-let operator = "*";
+let operator = "-";
 let secondNum = 3;
 
 //basic math functions//
@@ -32,4 +32,6 @@ const operate = function () {
         return divide()
     }
 }
+
+let storeValue = 0;
 
