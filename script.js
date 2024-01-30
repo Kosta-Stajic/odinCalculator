@@ -47,15 +47,13 @@ function updateDisplay() {
     secondNum = parseInt(cutDisplay[1])
     operator = displaySplit.match(/[+-/*]/)
 }
-//add numbers to display
-buttons.forEach(function (button) {
-    button.addEventListener("click", () =>
-        display.textContent += button.textContent)
-})
 
-// Update display after every button press
+//add numbers to display and update the display value with each button click
 buttons.forEach(function (button) {
-    button.addEventListener("click", () => updateDisplay())
+    button.addEventListener("click", () => {
+        display.textContent += button.textContent;
+        updateDisplay();
+    })
 })
 
 // calling operate once = is pressed
@@ -76,7 +74,7 @@ clear.addEventListener("click", () => {
     updateDisplay()
 })
 
-/* trying to remove the last input in the display will get back to this later
+/* trying to remove the last input in the display, get back to this later
  const removeOne = document.querySelector (".reduce")
 removeOne.addEventListener ('click', () =>
 document.getElementById ("display").textContent)
