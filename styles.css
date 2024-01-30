@@ -9,7 +9,7 @@ body {
 }
 
 
-.display {
+#display {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ body {
     align-items: center;
 }
 
-.functions {
+.operators {
     display: flex;
     gap: 6px;
 }

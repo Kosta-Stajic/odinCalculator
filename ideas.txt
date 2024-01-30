@@ -1,0 +1,3 @@
+FIgured out a function using ChatGPT. Which isn't the best option however I can try to adapt it to my own knowledge and make new functions that make sense to me. 
+
+Tomorrow sit down, try to use the split option to make my own function that stores values inside 3 different variables. Ask odin community for help.
