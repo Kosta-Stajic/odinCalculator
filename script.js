@@ -1,32 +1,32 @@
 
 
-//main variables
-
+// Get DOM elements
+const buttons = document.querySelectorAll(".num")
+const operators = document.querySelectorAll(".operator")
 let display = document.getElementById("display")
+
+// Variables for calculations
 let firstNum
 let secondNum
 let operator
-const buttons = document.querySelectorAll(".num")
-const operators = document.querySelectorAll(".operator")
 let displaySplit
 let cutDisplay
 
-// basic math functions 
+// Basic math functions 
 const add = function () {
     return firstNum + secondNum;
 }
-
 const subtract = function () {
     return firstNum - secondNum;
 }
 const multiply = function () {
     return firstNum * secondNum
 }
-
 const divide = function () {
     return firstNum / secondNum;
 }
 
+// Operate function
 const operate = function () {
     if (operator == "+") {
         return add()
@@ -39,7 +39,6 @@ const operate = function () {
     }
 }
 
-
 //update display
 function updateDisplay() {
     displaySplit = display.textContent
@@ -50,44 +49,34 @@ function updateDisplay() {
 }
 //add numbers to display
 buttons.forEach(function (button) {
-
     button.addEventListener("click", () =>
         display.textContent += button.textContent)
-
 })
 
-//functions
-
-
-
-// updateDisplay after every button press
+// Update display after every button press
 buttons.forEach(function (button) {
     button.addEventListener("click", () => updateDisplay())
 })
-// calling operate
+
+// calling operate once = is pressed
 let equals = document.querySelector(".equals")
 equals.addEventListener("click", () =>
-    display.textContent = operate()
-)
+    display.textContent = operate())
 
-
+// Add operator to display
 operators.forEach(function (operand) {
     operand.addEventListener("click", () =>
         document.getElementById("display").textContent += operand.textContent)
-
 })
 
-
-
-
+// Clear the display
 const clear = document.querySelector(".remove")
 clear.addEventListener("click", () => {
     document.getElementById("display").textContent = ""
     updateDisplay()
-
 })
 
-/* trying to remove the last input in the display
+/* trying to remove the last input in the display will get back to this later
  const removeOne = document.querySelector (".reduce")
 removeOne.addEventListener ('click', () =>
 document.getElementById ("display").textContent)
