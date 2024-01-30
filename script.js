@@ -39,7 +39,7 @@ const operate = function () {
     }
 }
 
-//update display
+// Update display
 function updateDisplay() {
     displaySplit = display.textContent
     cutDisplay = displaySplit.split(/[+-/*]/)
@@ -48,7 +48,7 @@ function updateDisplay() {
     operator = displaySplit.match(/[+-/*]/)
 }
 
-//add numbers to display and update the display value with each button click
+// Add numbers to display and update the display value with each button click
 buttons.forEach(function (button) {
     button.addEventListener("click", () => {
         display.textContent += button.textContent;
@@ -56,7 +56,7 @@ buttons.forEach(function (button) {
     })
 })
 
-// calling operate once = is pressed
+// Calling operate once = is pressed
 let equals = document.querySelector(".equals")
 equals.addEventListener("click", () =>
     display.textContent = operate())
