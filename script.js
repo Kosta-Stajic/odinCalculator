@@ -39,7 +39,7 @@ const operate = function () {
     }
 }
 
-// Update display
+// Update display and fill 3 main variables with proper values
 function updateDisplay() {
     displaySplit = display.textContent
     cutDisplay = displaySplit.split(/[+-/*]/)
